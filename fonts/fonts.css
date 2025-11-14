@@ -5,8 +5,10 @@
 }
 
 @font-face {
-  font-weight: 410 715;
-  src: local('Inter-Variable'), url('./Inter-Variable.woff2') format('woff2');
+  font-weight: 400 785;
+  src: local('Inter-Variable'),
+    url(./Inter-Variable.woff2) format('woff2 supports variations'),
+    url(./Inter-Variable.woff2) format('woff2-variations');
   font-family: 'Inter-Variable';
   font-display: swap;
 }
