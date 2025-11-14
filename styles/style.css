@@ -99,6 +99,7 @@
   color: rgb(0 0 0 / 0.5);
   font-size: 14px;
   font-family: var(--font-family-accent);
+  text-shadow: 1px rgb(255 255 255 / 0.5);
 }
 
 @supports (
@@ -171,6 +172,7 @@
 .button {
   position: relative;
   transition: box-shadow 0.3s ease;
+  cursor: pointer;
   border: var(--button-outline);
   background-color: var(--background-color);
   color: var(--background-color);
@@ -209,16 +211,11 @@
 
 .card__icon-button {
   place-self: center end;
+  cursor: pointer;
   outline: none;
   border: none;
   background-color: transparent;
   padding: 2px 0 0;
-}
-
-.card__icon-button:focus-visible .like-icon {
-  transition: outline 0.3s ease;
-  outline: var(--button-outline);
-  outline-offset: 4px;
 }
 
 .like-icon {
@@ -226,6 +223,11 @@
   justify-content: end;
   width: 39px;
   height: 36px;
+}
+
+.card__icon-button:focus-visible .like-icon {
+  transition: outline 0.3s ease;
+  outline: var(--button-outline);
 }
 
 .like-icon.is-liked .heart {
@@ -289,8 +291,11 @@
 }
 
 .card__like-button {
-  align-self: start;
-  padding: 6px 35px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 10px 17px;
+  min-width: 130px;
 }
 
 .save-button {
