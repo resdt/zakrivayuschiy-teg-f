@@ -1,1 +1,26 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --background-color: #fff;
+  --accent-color: black;
+  --section-width: clamp(375px, 50vw, 700px);
+  --font-weight: 410;
+  --font-size: 18px;
+  --font-family: 'Inter-Variable';
+  --font-family-accent: 'PressStart2P';
+  --decor-shadow: inset 0 0 0 2px var(--accent-color);
+  --decor-border-width: 2px;
+  --decor-border: solid var(--decor-border-width) var(--accent-color);
+
+  --logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+
+  --card-header-font-weight: 715;
+
+  --heart-contour: var(--accent-color);
+  --heart-fill-color: #ff0000;
+  --heart-hover-fill-color: black;
+  --heart-core-color: white;
+
+  --button-outline: 2px solid var(--accent-color);
+  --button-font-size: 14px;
+  --button-shadow: 2px 2px var(--accent-color);
+}
