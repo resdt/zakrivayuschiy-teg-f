@@ -10,12 +10,15 @@
 */
 
 .page {
-  background-image: repeating-linear-gradient(#d3d3d3, transparent 2px),
-    repeating-linear-gradient(to top, #d3d3d3, transparent 2px),
+  background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      transparent 2px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
     repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-size: var(--font-size);
@@ -36,7 +39,7 @@
   box-shadow: var(--decor-shadow);
   background-color: var(--background-color);
   padding: clamp(122px, calc(119.183px + 0.751vw), 130px) 0;
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), fantasy;
 }
 
 @media (width >= 1440px) {
@@ -67,6 +70,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin-bottom: 50px;
 }
 
 .card {
@@ -98,7 +102,7 @@
   content: '</HTML>';
   color: rgb(0 0 0 / 0.5);
   font-size: 14px;
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), fantasy;
   text-shadow: 1px rgb(255 255 255 / 0.5);
 }
 
@@ -206,7 +210,7 @@
 .button__text {
   font-size: var(--button-font-size);
   line-height: 90%;
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), fantasy;
 }
 
 .card__icon-button {
@@ -215,19 +219,18 @@
   outline: none;
   border: none;
   background-color: transparent;
-  padding: 2px 0 0;
+  padding: 0;
+}
+
+.card__icon-button:focus-visible {
+  transition: outline 0.3s ease;
+  outline: var(--button-outline);
 }
 
 .like-icon {
   display: flex;
-  justify-content: end;
   width: 39px;
-  height: 36px;
-}
-
-.card__icon-button:focus-visible .like-icon {
-  transition: outline 0.3s ease;
-  outline: var(--button-outline);
+  height: 34px;
 }
 
 .like-icon.is-liked .heart {
@@ -268,7 +271,7 @@
 }
 
 .like-icon.is-liked .contour {
-  transition: fill linear 0.3s 0.6s;
+  transition: fill linear 0.3s 0.06s;
   fill: var(--heart-fill-color);
 }
 
@@ -279,7 +282,7 @@
 
 .like-icon.is-liked .core {
   transition: fill linear 0.3s;
-  fill: var(--heart-core-color);
+  fill: var(--heart-fill-color);
 }
 
 .like-icon.is-liked .sparks {
@@ -293,9 +296,10 @@
 .card__like-button {
   display: flex;
   justify-content: center;
-  align-self: center;
-  padding: 10px 17px;
+  align-items: end;
+  padding: 9px 17px;
   min-width: 130px;
+  min-height: 38px;
 }
 
 .save-button {
@@ -357,7 +361,7 @@
 .popup__text {
   font-size: 14px;
   line-height: 150%;
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), fantasy;
   text-transform: uppercase;
 }
 
@@ -367,6 +371,6 @@
   padding: 9px 17px;
   font-size: var(--button-font-size);
   line-height: 90%;
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-accent), fantasy;
   text-transform: uppercase;
 }
