@@ -10,13 +10,7 @@
 */
 
 .page {
-  background-image: repeating-linear-gradient(
-      to right,
-      #d3d3d3,
-      transparent 2px
-    ),
-    repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
-    repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -215,6 +209,7 @@
 
 .card__icon-button {
   place-self: center end;
+  transition: outline 0.3s ease;
   cursor: pointer;
   outline: none;
   border: none;
@@ -223,7 +218,6 @@
 }
 
 .card__icon-button:focus-visible {
-  transition: outline 0.3s ease;
   outline: var(--button-outline);
 }
 
@@ -307,6 +301,7 @@
   align-items: center;
   gap: 9px;
   margin: 0 auto;
+  margin-bottom: 100px;
   padding: 15px 18px;
 }
 
